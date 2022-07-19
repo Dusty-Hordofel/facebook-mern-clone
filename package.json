@@ -1,0 +1,20 @@
+{
+  "name": "facebook-mern-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dusty-Hordofel/facebook-mern-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dusty-Hordofel/facebook-mern-clone/issues"
+  },
+  "homepage": "https://github.com/Dusty-Hordofel/facebook-mern-clone#readme"
+}
