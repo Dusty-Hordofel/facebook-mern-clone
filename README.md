@@ -29,3 +29,8 @@ Section I. Setup Project
 6. working with JSON
    I. import JSON in server.js
    II. replace res.send by res.json in routes & controllers folder
+
+Section II. Authentication and sending emails (backend)
+
+7. User Modal
+   I. create model->User.js
