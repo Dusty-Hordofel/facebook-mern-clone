@@ -6,3 +6,8 @@ Section I. Setup Project
    III. create backend folder in root folder
    IV. npm init -y,npm i expess mongoose morgan dotenv
    V.create a server
+2. cors (cross origin ressource sharing)
+   I.npm i cors
+   II. add cors options
+   III.npm i axios in frontend folder
+   IV. test cors
