@@ -25,3 +25,7 @@ Section I. Setup Project
 5. MongoDB configuration
    I. add MongoDB url in .env
    II. import mongoose in server.js & add connection to the MongoDB.
+
+6. working with JSON
+   I. import JSON in server.js
+   II. replace res.send by res.json in routes & controllers folder

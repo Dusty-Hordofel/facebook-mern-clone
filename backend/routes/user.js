@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', home);
 router.get('/books', (req, res) => {
-  res.send('Hello the new Books!');
+  res.status(200).json({ message: 'Hello the new Books!' }); //if we use 204 we are not going to see the body
 });
 
 export default router;
