@@ -17,3 +17,7 @@ Section I. Setup Project
    II. import express & add C&P routes from server.js
    III import userRoutes in server.js
    IV. create controllers folder
+
+4. variable d'environnements
+   I. create .env file & add PORT
+   II. import dotenv in server.js

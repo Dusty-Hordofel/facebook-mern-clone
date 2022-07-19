@@ -1,8 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import userRoutes from './routes/user.js';
+import dotenv from 'dotenv';
 //import { readdirSync } from 'fs';
 const app = express();
+dotenv.config();
 const allowed = ['http://localhost:3002', '...'];
 function options(req, res) {
   let tmp;
@@ -27,7 +29,7 @@ app.use('/api/user', userRoutes);
 // console.log(
 //   readdirSync('./routes').map((r) => app.use('/', require(`./routes/${r}`)))
 // );
-
-app.listen(8600, () => {
+const port = process.env.PORT || 8700;
+app.listen(port, () => {
   console.log('server is running at port 8600');
 });
