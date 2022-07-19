@@ -2,9 +2,23 @@ import express from 'express';
 import cors from 'cors';
 import userRoutes from './routes/user.js';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 //import { readdirSync } from 'fs';
+
 const app = express();
 dotenv.config();
+
+//database connection
+mongoose
+  .connect(process.env.MONGO_URL, { useNewUrlParser: true })
+  .then(() => {
+    console.log('database connected successfully');
+  })
+  .catch((err) => {
+    console.log('something went wrong while connecting to the database', err);
+  });
+
+//cors
 const allowed = ['http://localhost:3002', '...'];
 function options(req, res) {
   let tmp;
@@ -31,5 +45,5 @@ app.use('/api/user', userRoutes);
 // );
 const port = process.env.PORT || 8700;
 app.listen(port, () => {
-  console.log('server is running at port 8600');
+  console.log(`server is running at port ${port}`);
 });

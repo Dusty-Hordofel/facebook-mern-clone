@@ -21,3 +21,7 @@ Section I. Setup Project
 4. variable d'environnements
    I. create .env file & add PORT
    II. import dotenv in server.js
+
+5. MongoDB configuration
+   I. add MongoDB url in .env
+   II. import mongoose in server.js & add connection to the MongoDB.
