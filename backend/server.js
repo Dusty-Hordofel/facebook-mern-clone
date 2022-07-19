@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import userRoutes from './routes/user.js';
+//import { readdirSync } from 'fs';
 const app = express();
 const allowed = ['http://localhost:3002', '...'];
 function options(req, res) {
@@ -21,12 +23,10 @@ function options(req, res) {
 app.use(express.json());
 app.use(cors(options));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-app.get('/books', (req, res) => {
-  res.send('Hello the new Books!');
-});
+app.use('/api/user', userRoutes);
+// console.log(
+//   readdirSync('./routes').map((r) => app.use('/', require(`./routes/${r}`)))
+// );
 
 app.listen(8600, () => {
   console.log('server is running at port 8600');

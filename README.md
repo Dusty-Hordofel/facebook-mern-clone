@@ -11,3 +11,9 @@ Section I. Setup Project
    II. add cors options
    III.npm i axios in frontend folder
    IV. test cors
+
+3. setup routes
+   I. create routes folder
+   II. import express & add C&P routes from server.js
+   III import userRoutes in server.js
+   IV. create controllers folder
