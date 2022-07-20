@@ -32,18 +32,44 @@ Section I. Setup Project
 
 Section II. Authentication and sending emails (backend)
 
-7. User Modal
-   I. create model->User.js
+7.  User Modal
+    I. create model->User.js
 
-8. Register and validate data & using Regex to validate email
-   I. create userRoutes
-   II. create helpers->validation
-   III. create register controllers
-   IV. test the script in Postman
+8.  Register and validate data & using Regex to validate email
+    I. create userRoutes
+    II. create helpers->validation
+    III. create register controllers
+    IV. test the script in Postman
 
-9. JSON web tokens
-   I. npm i jsonwebtoken
-   II. create helpers->tokens.js->generateToken()
-   III. create .env->TOKEN_SECRET,
-   IV. create controllers->users.js emailVerificationToken const
-   V. test the script in Postman
+9.  JSON web tokens
+    I. npm i jsonwebtoken
+    II. create helpers->tokens.js->generateToken()
+    III. create .env->TOKEN_SECRET,
+    IV. create controllers->users.js emailVerificationToken const
+    V. test the script in Postman
+
+10. Setup Google OAuth 2.0 to Access Google APIs
+    I. go to google search console (console.cloud.google.com)
+    II. create a new project (facebook)
+    III. go to API et services -> OAuth consent screen
+
+        I. click on create
+        II.  then fill the App information
+        III. save and continue
+        IV. add a test user
+
+    IV. go to credentials
+
+        I. onClick: create credentials->ID Client 0Auth
+        II. define the application type (web application)
+        III. add name (facebook) & Authorised javascript origine (http://localhost:3000) & Authorised redirect URIs (https://developers.google.com/oauthplayground/)
+        IV. download the information we get
+
+    V. add BASE_URL,EMAIL,MAILING_ID & MAILING_SECRET in env file.
+    VI. go to (https://developers.google.com/oauthplayground/)
+
+        I. go to settinggs (check : use your own oauth)
+        II.  add (https://mail.google.com) in authorised APIs field and validate
+        III. select the test count.
+        IV. onClick: Exchange authorisation code for tokens.
+        V. copy Refresh token & Access token to env file
