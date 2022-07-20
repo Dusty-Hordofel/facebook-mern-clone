@@ -5,6 +5,7 @@ import {
 } from '../helpers/validation.js';
 import User from '../models/User.js';
 import bcrypt from 'bcrypt'; //bcryptjs is used to hash the password.
+import { generateToken } from '../helpers/tokens.js';
 
 export const register = async (req, res) => {
   try {
@@ -68,6 +69,13 @@ export const register = async (req, res) => {
       bDay,
       gender,
     }).save(); //save a new user
+
+    const emailVerificationToken = generateToken(
+      { id: user._id.toString() },
+      '30m'
+    );
+    console.log(emailVerificationToken);
+
     res.status(201).json(user);
   } catch (error) {
     res.status(500).json({ message: error.message });

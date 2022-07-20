@@ -40,3 +40,10 @@ Section II. Authentication and sending emails (backend)
    II. create helpers->validation
    III. create register controllers
    IV. test the script in Postman
+
+9. JSON web tokens
+   I. npm i jsonwebtoken
+   II. create helpers->tokens.js->generateToken()
+   III. create .env->TOKEN_SECRET,
+   IV. create controllers->users.js emailVerificationToken const
+   V. test the script in Postman
