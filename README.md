@@ -34,3 +34,9 @@ Section II. Authentication and sending emails (backend)
 
 7. User Modal
    I. create model->User.js
+
+8. Register and validate data & using Regex to validate email
+   I. create userRoutes
+   II. create helpers->validation
+   III. create register controllers
+   IV. test the script in Postman
