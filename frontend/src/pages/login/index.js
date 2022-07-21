@@ -29,11 +29,11 @@ export default function Login() {
           <div className="login_2">
             <div className="login_2_wrap">
               <Formik
-                enableReinitialize
+                enableReinitialize //enableReinitialize is a Formik hook used to enable formik to reinitialize the form when the user navigates to a new page
                 initialValues={{
                   email,
                   password,
-                }}
+                }} //initialValues is a Formik hook used to initialize the formik state
               >
                 {(formik) => (
                   <Form>

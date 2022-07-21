@@ -122,4 +122,8 @@ Section III. Authentification frontend
     III. style the <Login/>
     III. create components->inputs-> <LoginInput/>
     IV. style the <LoginInput/>
-17.
+
+17. Login and Register Part 2
+    I. style the <LoginInput/> used in <Login/>
+
+18. Login and Register Part 3
