@@ -1,8 +1,15 @@
 import './style.css';
 import { useField, ErrorMessage } from 'formik';
-//import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
+
 export default function LoginInput({ placeholder, bottom, ...props }) {
   const [field, meta] = useField(props); //useField() is a hook used to get access to the formik state and props
+
+  const desktopView = useMediaQuery({
+    query: '(min-width: 850px)',
+  }); //desktopView is a hook used to get access to the media query state
+  console.log(desktopView);
+
   return (
     <div className="input_wrap">
       {meta.touched && meta.error && !bottom && (

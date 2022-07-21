@@ -135,4 +135,7 @@ Section III. Authentification frontend
     VI. add bottom in <Login/> attribute to handle displaying error
 
 19. Login and Register Part 4 (responsiveness)
-    I. add deskpotView (responsiveness)
+    I. add a breakPoint in pages->login->style.css
+    II. npm i react-responsive
+    III. import { useMediaQuery } from 'react-responsive' <LoginInput/>
+    IV. create desktopView const & add it in the <LoginInput/>
