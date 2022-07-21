@@ -66,10 +66,23 @@ Section II. Authentication and sending emails (backend)
         IV. download the information we get
 
     V. add BASE_URL,EMAIL,MAILING_ID & MAILING_SECRET in env file.
-    VI. go to (https://developers.google.com/oauthplayground/)
+    VI. go to (https://developers.google.com/oauthplayground)
 
         I. go to settinggs (check : use your own oauth)
         II.  add (https://mail.google.com) in authorised APIs field and validate
         III. select the test count.
         IV. onClick: Exchange authorisation code for tokens.
         V. copy Refresh token & Access token to env file
+
+11. Finish register and send emails
+
+    I. npm i googleapis nodemailer
+    II. create helpers->mailer.js
+    III. create email.html template & add assets folder
+    IV. past html content in html compressor (https://htmlcompressor.com/compressor/) & past the result in mailer.js
+    V. create controllers->user.js-> url const
+    VI. import {sendVerificationEmail,token }
+    VII. go to tempmail (https://temp-mail.org/fr/)
+    VIII. delete html file
+    IX. create token constant and send response to the frontend
+    X. verify process in Postman and tempmail

@@ -6,6 +6,7 @@ import {
 import User from '../models/User.js';
 import bcrypt from 'bcrypt'; //bcryptjs is used to hash the password.
 import { generateToken } from '../helpers/tokens.js';
+import { sendVerificationEmail } from '../helpers/mailer.js';
 
 export const register = async (req, res) => {
   try {
@@ -74,10 +75,31 @@ export const register = async (req, res) => {
       { id: user._id.toString() },
       '30m'
     );
-    console.log(emailVerificationToken);
+    //console.log(emailVerificationToken);
 
-    res.status(201).json(user);
+    const url = `${process.env.BASE_URL}/activate/${emailVerificationToken}`;
+    //console.log(url);
+    sendVerificationEmail(user.email, user.first_name, url); //send email to user
+    const token = generateToken({ id: user._id.toString() }, '7d'); //to generate a token
+    res.send({
+      id: user._id,
+      username: user.username,
+      picture: user.picture,
+      first_name: user.first_name,
+      last_name: user.last_name,
+      token: token,
+      verified: user.verified,
+      message: 'Register Success ! please activate your email to start',
+    });
+
+    //res.status(201).json(user);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
+// import dotenv from 'dotenv';
+//console.log('inside send verification email');
+
+// // Useful for getting environment vairables
+// dotenv.config();
