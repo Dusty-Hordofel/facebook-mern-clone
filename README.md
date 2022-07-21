@@ -99,4 +99,13 @@ Section II. Authentication and sending emails (backend)
     III. update activateAccount script
     III. test the script in Postman
 
-Section III.
+Section III. Authentification frontend
+
+14. Let's setup react router dom
+    I. frontend->npm i react-router-dom
+    II. add {BrowserRouter} in index.js & {Router,Routes} in App.js
+    III. create pages->login->index.js & style.css
+    IV. create pages->profile->index.js & style.css
+    V. create pages->Home->index.js & style.css
+    VI. import <Home/>,<Login/> & <Profile/> in App.js
+    VII. test pages

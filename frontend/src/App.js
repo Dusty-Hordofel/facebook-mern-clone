@@ -1,19 +1,18 @@
-import { LiveVideo } from './svg';
-import axios from 'axios';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/home';
+import Login from './pages/login';
+import Profile from './pages/profile';
 
-function App() {
-  const get = async () => {
-    const response = await axios.get('http://localhost:8600');
-    console.log(response);
-  };
-  get();
+const App = () => {
   return (
     <div>
-      welcome to frontend
-      <div className="birthdays_icon"></div>
-      <LiveVideo color="green" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
