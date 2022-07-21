@@ -109,3 +109,9 @@ Section III. Authentification frontend
     V. create pages->Home->index.js & style.css
     VI. import <Home/>,<Login/> & <Profile/> in App.js
     VII. test pages
+
+15. React Redux store
+    I. npm i redux react-redux redux-devtools-extension
+    II. create index.js-> store, import the Provider & composeWithDevTools
+    III. create reducers->index.js
+    IV. create userReducer.js
