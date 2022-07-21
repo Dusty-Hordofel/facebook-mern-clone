@@ -86,3 +86,9 @@ Section II. Authentication and sending emails (backend)
     VIII. delete html file
     IX. create token constant and send response to the frontend
     X. verify process in Postman and tempmail
+
+12. Activate email
+
+    I. import jwt from "jsonwebtoken"
+    II. create controllers->user.js->ctivateAccount
+    III. tes the script in Postman

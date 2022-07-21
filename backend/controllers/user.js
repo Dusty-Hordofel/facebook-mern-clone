@@ -7,6 +7,7 @@ import User from '../models/User.js';
 import bcrypt from 'bcrypt'; //bcryptjs is used to hash the password.
 import { generateToken } from '../helpers/tokens.js';
 import { sendVerificationEmail } from '../helpers/mailer.js';
+import jwt from 'jsonwebtoken';
 
 export const register = async (req, res) => {
   try {
@@ -98,8 +99,16 @@ export const register = async (req, res) => {
   }
 };
 
-// import dotenv from 'dotenv';
-//console.log('inside send verification email');
-
-// // Useful for getting environment vairables
-// dotenv.config();
+export const activateAccount = async (req, res) => {
+  const { token } = req.body; //we take token from the body
+  const user = jwt.verify(token, process.env.TOKEN_SECRET); //we verify the token
+  const check = await User.findById(user.id); //we find the user by id
+  if (check.verified == true) {
+    return res.status(400).json({ message: 'this email is already activated' });
+  } else {
+    await User.findByIdAndUpdate(user.id, { verified: true });
+    return res
+      .status(200)
+      .json({ message: 'Account has beeen activated successfully.' });
+  }
+};
