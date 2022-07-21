@@ -1,4 +1,3 @@
-import './style.css';
 import { Formik, Form } from 'formik';
 import { Link } from 'react-router-dom';
 import LoginInput from '../../components/inputs/loginInput';
@@ -10,7 +9,7 @@ const loginInfos = {
   password: '',
 };
 
-export default function Login() {
+export default function LoginForm() {
   const [login, setLogin] = useState(loginInfos);
   const { email, password } = login;
 

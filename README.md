@@ -139,3 +139,10 @@ Section III. Authentification frontend
     II. npm i react-responsive
     III. import { useMediaQuery } from 'react-responsive' <LoginInput/>
     IV. create desktopView const & add it in the <LoginInput/>
+
+20. Login and Register Part 5 (Footer)
+    I. create components->login-> <Footer/>
+    II.style the component
+    III. create components-login-><LoginForm/>(C&P login content) & <Footer/>
+    IV. import <LoginForm/> & <Footer/> in login
+    V. style the <Footer/>
