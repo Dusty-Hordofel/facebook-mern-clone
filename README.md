@@ -92,3 +92,11 @@ Section II. Authentication and sending emails (backend)
     I. import jwt from "jsonwebtoken"
     II. create controllers->user.js->ctivateAccount
     III. tes the script in Postman
+
+13. Login
+    I. create loginRoute
+    II. create login controller
+    III. update activateAccount script
+    III. test the script in Postman
+
+Section III.
