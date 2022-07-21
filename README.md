@@ -127,3 +127,12 @@ Section III. Authentification frontend
     I. style the <LoginInput/> used in <Login/>
 
 18. Login and Register Part 3
+    I. create validationSchema in <Login/> using Formik
+    II. import Yup for validate form data
+    III. create loginValidation function
+    IV. handle the error in ...inputs->loginInput
+    V. setting error from manifest.json
+    VI. add bottom in <Login/> attribute to handle displaying error
+
+19. Login and Register Part 4 (responsiveness)
+    I. add deskpotView (responsiveness)
