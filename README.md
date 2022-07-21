@@ -115,3 +115,11 @@ Section III. Authentification frontend
     II. create index.js-> store, import the Provider & composeWithDevTools
     III. create reducers->index.js
     IV. create userReducer.js
+
+16. Login and Register Part 1
+    I. npm i formik yup
+    II. create Login fors with Formik
+    III. style the <Login/>
+    III. create components->inputs-> <LoginInput/>
+    IV. style the <LoginInput/>
+17.
