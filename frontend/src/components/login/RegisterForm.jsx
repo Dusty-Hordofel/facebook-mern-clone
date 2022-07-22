@@ -3,7 +3,9 @@ import { useState } from 'react';
 import RegisterInput from '../inputs/registerInput';
 import * as Yup from 'yup';
 import DateOfBirthSelect from './DateOfBirthSelect';
+import ClipLoader from 'react-spinners/ClipLoader';
 import GenderSelect from './GenderSelect';
+import axios from 'axios';
 
 const userInfos = {
   first_name: '',
@@ -75,6 +77,42 @@ export default function RegisterForm() {
   const [dateError, setDateError] = useState('');
   const [genderError, setGenderError] = useState('');
 
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const registerSubmit = async () => {
+    try {
+      const { data } = await axios.post(
+        // `${process.env.REACT_APP_BACKEND_URL}/user/register`,
+        'http://localhost:8600/api/user/register',
+        // '/user/register',
+        {
+          first_name,
+          last_name,
+          email,
+          password,
+          bYear,
+          bMonth,
+          bDay,
+          gender,
+        }
+      );
+      setError('');
+      setSuccess(data.message);
+      //const { message, ...rest } = data;
+      // setTimeout(() => {
+      //   dispatch({ type: "LOGIN", payload: rest });
+      //   Cookies.set("user", JSON.stringify(rest));
+      //   navigate("/");
+      // }, 2000);
+    } catch (error) {
+      setLoading(false);
+      setSuccess('');
+      setError(error.response.data.message);
+    }
+  };
+
   return (
     //blur className allow RegisterForm to be accross of all screen, above the login form.It's cover all the screen.
     <div className="blur">
@@ -121,6 +159,7 @@ export default function RegisterForm() {
             } else {
               setDateError('');
               setGenderError('');
+              registerSubmit();
             }
           }}
         >
@@ -189,6 +228,9 @@ export default function RegisterForm() {
               <div className="reg_btn_wrapper">
                 <button className="blue_btn open_signup">Sign Up</button>
               </div>
+              <ClipLoader color="#1876f2" loading={loading} size={30} />
+              {error && <div className="error_text">{error}</div>}
+              {success && <div className="success_text">{success}</div>}
             </Form>
           )}
         </Formik>

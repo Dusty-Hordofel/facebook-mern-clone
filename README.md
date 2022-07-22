@@ -188,3 +188,13 @@ Section III. Authentification frontend
     III. create components->login-> <GenderSelect/>
     IV. create components->login-> <DateOfBirthSelect/>
     V.style <DateOfBirthSelect/> & <GenderSelect/>
+
+26. Register Submit
+    I. create registerSubmit() in <RegisterForm/>
+    II.add {error,success,loading} states & npm i axios in frontend
+    III. add backend url in .env file
+    IV. retrieve error & success from the backend & display it
+    V. style error and success
+    VI.npm i react-spinners et use it (https://www.davidhu.io/react-spinners/)
+    VII. fill registerSubmit()
+    VIII. try the script
