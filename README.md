@@ -170,4 +170,13 @@ Section III. Authentification frontend
     II. add enableReinitialize props
     III. create validationSchema props using Yup
 
-& <RegisterInput/>
+24. Register form error handling
+
+    <RegisterForm/>
+        I. add style <RegisterForm/>
+        II. remove props bottom && add register_input_wrap
+
+    <RegisterInput>
+        I. add style <RegisterInput/>
+        II. create view constant breakPoint and replace desktopView
+        III. create test variables
