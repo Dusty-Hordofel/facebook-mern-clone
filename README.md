@@ -176,7 +176,15 @@ Section III. Authentification frontend
         I. add style <RegisterForm/>
         II. remove props bottom && add register_input_wrap
 
-    <RegisterInput>
+    <RegisterInput/>
         I. add style <RegisterInput/>
         II. create view constant breakPoint and replace desktopView
         III. create test variables
+
+25. Finish register error handling and fix errors
+    <RegisterInput/> -> <Formik>
+    I. add onSubmit method to validate user age & gender using if statement.
+    II. add date and Gender States to manage errors
+    III. create components->login-> <GenderSelect/>
+    IV. create components->login-> <DateOfBirthSelect/>
+    V.style <DateOfBirthSelect/> & <GenderSelect/>
