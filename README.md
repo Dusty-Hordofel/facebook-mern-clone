@@ -198,3 +198,10 @@ Section III. Authentification frontend
     VI.npm i react-spinners et use it (https://www.davidhu.io/react-spinners/)
     VII. fill registerSubmit()
     VIII. try the script
+
+27. Add the data to the state: add backend information to userReducer
+    I. retrieve backend info without message
+    II. set setTimeout & dispatch the data in the store using LOGIN action
+    III. use js-cookie to persist user informations in the store.
+
+28.

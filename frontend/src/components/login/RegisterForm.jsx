@@ -4,8 +4,11 @@ import RegisterInput from '../inputs/registerInput';
 import * as Yup from 'yup';
 import DateOfBirthSelect from './DateOfBirthSelect';
 import ClipLoader from 'react-spinners/ClipLoader';
+import { useDispatch } from 'react-redux';
+import Cookies from 'js-cookie';
 import GenderSelect from './GenderSelect';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const userInfos = {
   first_name: '',
@@ -18,6 +21,8 @@ const userInfos = {
   gender: '',
 };
 export default function RegisterForm() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [user, setUser] = useState(userInfos);
 
   const {
@@ -100,12 +105,12 @@ export default function RegisterForm() {
       );
       setError('');
       setSuccess(data.message);
-      //const { message, ...rest } = data;
-      // setTimeout(() => {
-      //   dispatch({ type: "LOGIN", payload: rest });
-      //   Cookies.set("user", JSON.stringify(rest));
-      //   navigate("/");
-      // }, 2000);
+      const { message, ...rest } = data;
+      setTimeout(() => {
+        dispatch({ type: 'LOGIN', payload: rest });
+        Cookies.set('user', JSON.stringify(rest));
+        navigate('/');
+      }, 2000);
     } catch (error) {
       setLoading(false);
       setSuccess('');
