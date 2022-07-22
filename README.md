@@ -154,4 +154,13 @@ Section III. Authentification frontend
     IV. create components->inputs-><RegisterInput/>
     V.style the <RegisterForm/>
 
-    & <RegisterInput/>
+22. Working with dates for birthday
+    I. <RegisterForm/>
+
+        I. extract all the user information
+        II. set current year,month and day in userInfos.
+        III. create const years array & show all years in the input.
+        IV. create const months array to show all month
+        V. create getDays() & const days array to show all days.
+
+23. & <RegisterInput/>
