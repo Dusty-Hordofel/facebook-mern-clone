@@ -163,4 +163,11 @@ Section III. Authentification frontend
         IV. create const months array to show all month
         V. create getDays() & const days array to show all days.
 
-23. & <RegisterInput/>
+23. Register form validation
+    I. <RegisterForm/>
+    <Formik>
+    I. Define initialValues props
+    II. add enableReinitialize props
+    III. create validationSchema props using Yup
+
+& <RegisterInput/>

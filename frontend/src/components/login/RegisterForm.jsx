@@ -1,6 +1,8 @@
 import { Form, Formik } from 'formik';
 import { useState } from 'react';
 import RegisterInput from '../inputs/registerInput';
+import * as Yup from 'yup';
+
 const userInfos = {
   first_name: '',
   last_name: '',
@@ -42,7 +44,31 @@ export default function RegisterForm() {
     return new Date(bYear, bMonth, 0).getDate();
   };
   const days = Array.from(new Array(getDays()), (val, index) => 1 + index);
-  console.log(user);
+  //console.log(user);
+
+  const registerValidation = Yup.object({
+    first_name: Yup.string()
+      .required("What's your First name ?")
+      .min(2, 'Fisrt name must be between 2 and 16 characters.')
+      .max(16, 'Fisrt name must be between 2 and 16 characters.')
+      .matches(/^[aA-zZ]+$/, 'Numbers and special characters are not allowed.'), ///^[aA-zZ\s]+$/to allow spaces
+    last_name: Yup.string()
+      .required("What's your Last name ?")
+      .min(2, 'Last name must be between 2 and 16 characters.')
+      .max(16, 'Last name must be between 2 and 16 characters.')
+      .matches(/^[aA-zZ]+$/, 'Numbers and special characters are not allowed.'),
+    email: Yup.string()
+      .required(
+        "You'll need this when you log in and if you ever need to reset your password."
+      )
+      .email('Enter a valid email address.'),
+    password: Yup.string()
+      .required(
+        'Enter a combination of at least six numbers,letters and punctuation marks(such as ! and &).'
+      )
+      .min(6, 'Password must be atleast 6 characters.')
+      .max(36, "Password can't be more than 36 characters"),
+  });
 
   return (
     //blur className allow RegisterForm to be accross of all screen, above the login form.It's cover all the screen.
@@ -53,7 +79,23 @@ export default function RegisterForm() {
           <span>Sign Up</span>
           <span>it's quick and easy</span>
         </div>
-        <Formik>
+        <Formik
+          //enableReinitialize is a prop that allows you to reinitialize the form when the user changes the values of the inputs
+          enableReinitialize
+          //initialValues is a prop that allows you to set the initial values of the inputs
+          initialValues={{
+            first_name,
+            last_name,
+            email,
+            password,
+            bYear,
+            bMonth,
+            bDay,
+            gender,
+          }}
+          // validationSchema is a prop that allows you to manage the validation
+          validationSchema={registerValidation}
+        >
           {(formik) => (
             <Form className="register_form">
               <div className="reg_line">
