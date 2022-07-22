@@ -199,9 +199,13 @@ Section III. Authentification frontend
     VII. fill registerSubmit()
     VIII. try the script
 
-27. Add the data to the state: add backend information to userReducer
+27. Add the backend information to userReducer
     I. retrieve backend info without message
     II. set setTimeout & dispatch the data in the store using LOGIN action
     III. use js-cookie to persist user informations in the store.
 
-28.
+28. Login Submit
+    I. define state in pages->login->index.js
+    II. pass setVisible proprety to the <LoginForm/> & <RegisterForm/>
+    III. create loginSubmit()
+    IV. add spinners after the form and manage error.
