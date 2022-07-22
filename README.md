@@ -146,3 +146,12 @@ Section III. Authentification frontend
     III. create components-login-><LoginForm/>(C&P login content) & <Footer/>
     IV. import <LoginForm/> & <Footer/> in login
     V. style the <Footer/>
+
+21. Register form
+    I. create component->login-><RegisterForm/>
+    II.update index.css file
+    III. import pages->login->index.js-><RegisterForm/>.
+    IV. create components->inputs-><RegisterInput/>
+    V.style the <RegisterForm/>
+
+    & <RegisterInput/>
