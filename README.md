@@ -217,3 +217,11 @@ Section IV. Header
     II. import <Header/> in App.js
 
 30. Header base Part 2
+    I. add header_right content and style it
+    II. select user from the store and create a conditional rendering
+
+31. CLick outside and element and close
+    I. add <Header/> -> <Home/>
+    II. create helpers->useClickOutside hook
+
+32.
