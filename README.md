@@ -231,3 +231,11 @@ Section IV. Header
     IV.add [useClickOutside] to <SearchMenu/> & pass setShowSearchMenu
     V. create input ref and iconVisible state in <SearchMenu/>
     VI. add useEffect to set onFocus when the component mount
+
+33. All Menu
+    I. components->header->AllMenu.jsx
+    II. add AllMenu in <Header/>
+    III. create <AllMenuItem/>
+    IV. create src->data->allMenu.js
+    V. import { menu, create } from data/allmenu
+    VI. style the <AllMenu/> & manage it's state (useState,useRef,useClickOutside)

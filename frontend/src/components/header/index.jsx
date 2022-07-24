@@ -15,11 +15,19 @@ import {
 } from '../../svg';
 import { useSelector } from 'react-redux'; //to access the state of the store, we use useSelector
 import SearchMenu from './SearchMenu';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import AllMenu from './AllMenu';
+import useClickOutside from '../../helpers/clickOutside';
 
 const Header = () => {
   const { user } = useSelector((user) => ({ ...user })); // destructuring the user object from the state
-  const [showSearchMenu, setShowSearchMenu] = useState(false);
+  const [showSearchMenu, setShowSearchMenu] = useState(false); //to dispaly searchMenu
+  const [showAllMenu, setShowAllMenu] = useState(false); //to display AllMenu
+
+  const allmenu = useRef(null);
+  useClickOutside(allmenu, () => {
+    setShowAllMenu(false);
+  });
 
   console.log(user);
   const color = '#65676b';
@@ -69,8 +77,15 @@ const Header = () => {
           {/*optional chaining.if we  haven't a user , we will not get an error*/}
           <span>{user?.first_name}</span>
         </Link>
-        <div className="circle_icon hover1">
+        <div
+          className="circle_icon hover1"
+          ref={allmenu}
+          onClick={() => setShowAllMenu((prev) => !prev)}
+
+          /*!showAllMenu*/
+        >
           <Menu />
+          {showAllMenu && <AllMenu />}
         </div>
         <div className="circle_icon hover1">
           <Messenger />
