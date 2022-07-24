@@ -251,3 +251,6 @@ Section IV. Header
     I. Update <SettingsPrivacy/> and manage the it's visibility
     II. create <HelpSupport.js/>
     III. create <DisplayAccessibility/>
+
+36. Responsive Header
+    I. add mediaqueries to the header->style.css
