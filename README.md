@@ -237,5 +237,14 @@ Section IV. Header
     II. add AllMenu in <Header/>
     III. create <AllMenuItem/>
     IV. create src->data->allMenu.js
-    V. import { menu, create } from data/allmenu
+    V. import { menu, create } from data/allMenu
     VI. style the <AllMenu/> & manage it's state (useState,useRef,useClickOutside)
+
+34. User menu part 1
+    I. create header->userMenu.jsx
+    II. import <userMenu/> in <Header/> & pass the user
+    III. style the <userMenu/>
+    IV. create usermenu folder,paste <userMenu/> & renmane it
+    V. create <SettingsPrivacy/>
+
+25. 

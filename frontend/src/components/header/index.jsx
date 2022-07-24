@@ -18,6 +18,7 @@ import SearchMenu from './SearchMenu';
 import { useState, useRef } from 'react';
 import AllMenu from './AllMenu';
 import useClickOutside from '../../helpers/clickOutside';
+import UserMenu from './userMenu';
 
 const Header = () => {
   const { user } = useSelector((user) => ({ ...user })); // destructuring the user object from the state
@@ -96,6 +97,7 @@ const Header = () => {
         </div>
         <div className="circle_icon hover1">
           <ArrowDown />
+          <UserMenu user={user} />
         </div>
       </div>
     </header>
