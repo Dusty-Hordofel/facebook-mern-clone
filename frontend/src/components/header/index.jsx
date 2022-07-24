@@ -24,10 +24,16 @@ const Header = () => {
   const { user } = useSelector((user) => ({ ...user })); // destructuring the user object from the state
   const [showSearchMenu, setShowSearchMenu] = useState(false); //to dispaly searchMenu
   const [showAllMenu, setShowAllMenu] = useState(false); //to display AllMenu
-
+  const [showUserMenu, setShowUserMenu] = useState(false);
   const allmenu = useRef(null);
+  const usermenu = useRef(null);
+
   useClickOutside(allmenu, () => {
     setShowAllMenu(false);
+  });
+
+  useClickOutside(usermenu, () => {
+    setShowUserMenu(false);
   });
 
   console.log(user);
@@ -78,14 +84,14 @@ const Header = () => {
           {/*optional chaining.if we  haven't a user , we will not get an error*/}
           <span>{user?.first_name}</span>
         </Link>
-        <div
-          className="circle_icon hover1"
-          ref={allmenu}
-          onClick={() => setShowAllMenu((prev) => !prev)}
-
-          /*!showAllMenu*/
-        >
-          <Menu />
+        <div className="circle_icon hover1" ref={allmenu}>
+          <div
+            onClick={() => {
+              setShowAllMenu((prev) => !prev);
+            }}
+          >
+            <Menu />
+          </div>
           {showAllMenu && <AllMenu />}
         </div>
         <div className="circle_icon hover1">
@@ -95,9 +101,15 @@ const Header = () => {
           <Notifications />
           <div className="right_notification">5</div>
         </div>
-        <div className="circle_icon hover1">
-          <ArrowDown />
-          <UserMenu user={user} />
+        <div className="circle_icon hover1" ref={usermenu}>
+          <div
+            onClick={() => {
+              setShowUserMenu((prev) => !prev);
+            }}
+          >
+            <ArrowDown />
+          </div>
+          {showUserMenu && <UserMenu user={user} />}
         </div>
       </div>
     </header>

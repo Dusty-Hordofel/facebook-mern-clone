@@ -247,4 +247,7 @@ Section IV. Header
     IV. create usermenu folder,paste <userMenu/> & renmane it
     V. create <SettingsPrivacy/>
 
-25. 
+35. User menu part 2
+    I. Update <SettingsPrivacy/> and manage the it's visibility
+    II. create <HelpSupport.js/>
+    III. create <DisplayAccessibility/>
