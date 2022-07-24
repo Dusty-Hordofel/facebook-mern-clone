@@ -14,9 +14,13 @@ import {
   Watch,
 } from '../../svg';
 import { useSelector } from 'react-redux'; //to access the state of the store, we use useSelector
+import SearchMenu from './SearchMenu';
+import { useState } from 'react';
 
 const Header = () => {
   const { user } = useSelector((user) => ({ ...user })); // destructuring the user object from the state
+  const [showSearchMenu, setShowSearchMenu] = useState(false);
+
   console.log(user);
   const color = '#65676b';
   return (
@@ -27,7 +31,7 @@ const Header = () => {
             <Logo />
           </div>
         </Link>
-        <div className="search search1">
+        <div className="search search1" onClick={() => setShowSearchMenu(true)}>
           <Search color={color} />
           <input
             type="text"
@@ -36,6 +40,9 @@ const Header = () => {
           />
         </div>
       </div>
+      {showSearchMenu && (
+        <SearchMenu color={color} setShowSearchMenu={setShowSearchMenu} />
+      )}
 
       <div className="header_middle">
         <Link to="/" className="middle_icon active">

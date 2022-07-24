@@ -222,6 +222,12 @@ Section IV. Header
 
 31. CLick outside and element and close
     I. add <Header/> -> <Home/>
-    II. create helpers->useClickOutside hook
+    II. create helpers->[useClickOutside] hook
 
-32.
+32. Search Menu
+    I. create header-><SearchMenu/> & style it
+    II. add states showSearchMenu to the <Header/>
+    III. add a conditional rendering to <SearchMenu/>
+    IV.add [useClickOutside] to <SearchMenu/> & pass setShowSearchMenu
+    V. create input ref and iconVisible state in <SearchMenu/>
+    VI. add useEffect to set onFocus when the component mount
