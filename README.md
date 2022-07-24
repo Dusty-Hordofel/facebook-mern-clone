@@ -209,3 +209,11 @@ Section III. Authentification frontend
     II. pass setVisible proprety to the <LoginForm/> & <RegisterForm/>
     III. create loginSubmit()
     IV. add spinners after the form and manage error.
+
+Section IV. Header
+
+29. Header base Part 1
+    I. create components->header->index.js-><Header/> & style.css
+    II. import <Header/> in App.js
+
+30. Header base Part 2
