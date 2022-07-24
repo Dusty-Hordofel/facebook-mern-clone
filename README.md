@@ -254,3 +254,8 @@ Section IV. Header
 
 36. Responsive Header
     I. add mediaqueries to the header->style.css
+
+37. Finish Header and fix issues
+    I. add active_header style
+    II. add conditional rendering to active_header
+    III/ add a forgot key at last mapping element in <allMenu/>

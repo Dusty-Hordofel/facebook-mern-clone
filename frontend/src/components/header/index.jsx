@@ -84,7 +84,10 @@ const Header = () => {
           {/*optional chaining.if we  haven't a user , we will not get an error*/}
           <span>{user?.first_name}</span>
         </Link>
-        <div className="circle_icon hover1" ref={allmenu}>
+        <div
+          className={`circle_icon hover1 ${showAllMenu && 'active_header'}`}
+          ref={allmenu}
+        >
           <div
             onClick={() => {
               setShowAllMenu((prev) => !prev);
@@ -101,13 +104,18 @@ const Header = () => {
           <Notifications />
           <div className="right_notification">5</div>
         </div>
-        <div className="circle_icon hover1" ref={usermenu}>
+        <div
+          className={`circle_icon hover1 ${showUserMenu && 'active_header'}`}
+          ref={usermenu}
+        >
           <div
             onClick={() => {
               setShowUserMenu((prev) => !prev);
             }}
           >
-            <ArrowDown />
+            <div style={{ transform: 'translateY(2px)' }}>
+              <ArrowDown />
+            </div>
           </div>
           {showUserMenu && <UserMenu user={user} />}
         </div>
