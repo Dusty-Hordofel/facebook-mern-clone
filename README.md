@@ -288,5 +288,7 @@ Section V. Home
     V. Stylize the <Home/> component and make it responsive
 
 42. Create post form
+    I. create components->createPost->index.jsx-> <CreatePost /> & style.css
+    II. import <CreatePost> to the <Home/>
 43. Responsive home advanced tricks 1
 44. Responsive home advanced tricks 2

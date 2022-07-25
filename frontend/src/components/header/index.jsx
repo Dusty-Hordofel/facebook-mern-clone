@@ -36,7 +36,7 @@ const Header = () => {
     setShowUserMenu(false);
   });
 
-  console.log(user);
+  //console.log(user);
   const color = '#65676b';
   return (
     <header>

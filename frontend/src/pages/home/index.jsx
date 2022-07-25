@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import RightHome from '../../components/home/right';
 import Stories from '../../components/home/stories';
+import CreatePost from '../../components/createPost';
 
 const Home = () => {
   const { user } = useSelector((user) => ({ ...user }));
@@ -13,6 +14,7 @@ const Home = () => {
       <LeftHome user={user} />
       <div className="home_middle">
         <Stories />
+        <CreatePost user={user} />
       </div>
       <RightHome user={user} />
     </div>
