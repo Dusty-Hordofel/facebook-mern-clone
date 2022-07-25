@@ -280,8 +280,13 @@ Section V. Home
     III. create right-><Contact>
     IV. Fix the <Header/> position
 
-41. Right home side
-42. Let's work on stories
-43. Create post form
-44. Responsive home advanced tricks 1
-45. Responsive home advanced tricks 2
+41. Let's work on stories
+    I. create components->home->stories->index.jsx-> <Stories/> & style.css
+    II.create components->home->stories-><story/>
+    III. import <Stories> to the <Home/>
+    IV.add data src->data->home.js
+    V. Stylize the <Home/> component and make it responsive
+
+42. Create post form
+43. Responsive home advanced tricks 1
+44. Responsive home advanced tricks 2
