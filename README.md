@@ -267,14 +267,15 @@ Section V. Home
     II. create routes-><NotLoggedInRoutes/> to redirect the logged user at homePage
     III. create nested protected routes in App.js using <LoggedInRoutes/> & NotLoggedInRoutes
 
-39. Left home menu part 1
+39. Left home menu (update LeftHome information)
     I. create components->home->left->index.jsx-> <LeftHome/> & style.css
     II. import <LeftHome/> to the <Home/> & pass the {user} info as a props
-    V. create src->data->home.js
-    III. create <LeftLink/>
-    IV. create <Shortcut/>
+    III. create src->data->home.js
+    IV. create <LeftLink/>
+    V. create <Shortcut/>
 
-40. Left home menu part 2
+40. Left home menu part 2 (the part 2 is in part 1)
+
 41. Right home side
 42. Let's work on stories
 43. Create post form
