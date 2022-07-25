@@ -259,3 +259,18 @@ Section IV. Header
     I. add active_header style
     II. add conditional rendering to active_header
     III/ add a forgot key at last mapping element in <allMenu/>
+
+Section V. Home
+
+38. Protected routes (very important !
+    I. create routes-><LoggedInRoutes/> to check if the user exists in the store
+    II. create routes-><NotLoggedInRoutes/> to redirect the logged user at homePage
+    III. create nested protected routes in App.js using <LoggedInRoutes/> & NotLoggedInRoutes
+
+39. Left home menu part 1
+40. Left home menu part 2
+41. Right home side
+42. Let's work on stories
+43. Create post form
+44. Responsive home advanced tricks 1
+45. Responsive home advanced tricks 2
