@@ -274,7 +274,11 @@ Section V. Home
     IV. create <LeftLink/>
     V. create <Shortcut/>
 
-40. Left home menu part 2 (the part 2 is in part 1)
+40. Right home side
+    I. create components->home->right->index.jsx-> <RighttHome/> & style.css
+    II. import <RighttHome/> to the <Home/> & pass the {user} info as a props
+    III. create right-><Contact>
+    IV. Fix the <Header/> position
 
 41. Right home side
 42. Let's work on stories
