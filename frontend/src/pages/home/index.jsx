@@ -1,11 +1,11 @@
+import { useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
+import CreatePost from '../../components/createPost';
 import Header from '../../components/header';
 import LeftHome from '../../components/home/left';
-import { useSelector } from 'react-redux';
-import './style.css';
 import RightHome from '../../components/home/right';
 import Stories from '../../components/home/stories';
-import CreatePost from '../../components/createPost';
-
+import './style.css';
 const Home = () => {
   const { user } = useSelector((user) => ({ ...user }));
   return (

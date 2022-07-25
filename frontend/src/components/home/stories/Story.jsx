@@ -1,4 +1,4 @@
-export default function Story({ story }) {
+const Story = ({ story }) => {
   return (
     <div className="story">
       <img src={story.image} alt="" className="story_img" />
@@ -8,4 +8,6 @@ export default function Story({ story }) {
       <div className="story_profile_name">{story.profile_name}</div>
     </div>
   );
-}
+};
+
+export default Story;

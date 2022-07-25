@@ -25,7 +25,7 @@ export default function Stories() {
     ? 5
     : query1175px
     ? 4
-    : stories.length;
+    : stories.length; //we display the number of stories using the query(1175px,1030px ...)  condition
   return (
     <div className="stories">
       <div className="create_story_card">
