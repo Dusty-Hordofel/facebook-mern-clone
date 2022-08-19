@@ -307,12 +307,12 @@ Section VI. Forgot ,reset password,activate account,logout
             I. create [success, setSuccess],[error, setError] & [loading, setLoading]
             II. create <ActivateForm/> && <Activate/>
             III. retrieve the token from URL using useParams
-            IV. use useEffect to activateAccount
-            V. test all verification process using a new user
+            IV. style <ActivateForm/>
 
-    I. update auth controller in
 
 46. Activate account part 2
+    IV. use useEffect to activateAccount
+    V. test all verification process using a new user
 47. Activate Account and fix asecurity risk
 48. re-Send verification code
 49. Logout
