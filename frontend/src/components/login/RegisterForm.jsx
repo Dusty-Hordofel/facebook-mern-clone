@@ -91,7 +91,7 @@ export default function RegisterForm({ setVisible }) {
     try {
       const { data } = await axios.post(
         // `${process.env.REACT_APP_BACKEND_URL}/user/register`,
-        'http://localhost:8600/api/user/register',
+        'http://localhost:8600/api/register',
         // '/user/register',
         {
           first_name,

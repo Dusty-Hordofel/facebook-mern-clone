@@ -21,6 +21,7 @@ mongoose
 //cors
 const allowed = [
   'http://localhost:8600/api',
+  'http://localhost:8600',
   'http://localhost:3002',
   'http://localhost:3000',
   'http://localhost:3001',
@@ -44,7 +45,7 @@ function options(req, res) {
 app.use(express.json());
 app.use(cors(options));
 
-app.use('/api/user', userRoutes);
+app.use('/api', userRoutes);
 // console.log(
 //   readdirSync('./routes').map((r) => app.use('/', require(`./routes/${r}`)))
 // );

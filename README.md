@@ -301,6 +301,17 @@ Section VI. Forgot ,reset password,activate account,logout
     II. create middlwares->auth.js & add it in auth route.
 
 45. Activate account part 1
+    I. create pages->home->activate.js && App.js
+    II. <Activate/>
+
+            I. create [success, setSuccess],[error, setError] & [loading, setLoading]
+            II. create <ActivateForm/> && <Activate/>
+            III. retrieve the token from URL using useParams
+            IV. use useEffect to activateAccount
+            V. test all verification process using a new user
+
+    I. update auth controller in
+
 46. Activate account part 2
 47. Activate Account and fix asecurity risk
 48. re-Send verification code
