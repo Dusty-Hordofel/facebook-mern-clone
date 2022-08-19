@@ -309,11 +309,14 @@ Section VI. Forgot ,reset password,activate account,logout
             III. retrieve the token from URL using useParams
             IV. style <ActivateForm/>
 
-
 46. Activate account part 2
-    IV. use useEffect to activateAccount
-    V. test all verification process using a new user
+    I. use useEffect & add activateAccount
+    II. update <ActivateForm/>
+    III. dispatch VERIFY action, setTimeout() & redirect to <Home/>
+    IV. test all verification process using a new user
+
 47. Activate Account and fix asecurity risk
+    I.
 48. re-Send verification code
 49. Logout
 50. Reset password part 1

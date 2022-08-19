@@ -9,13 +9,9 @@ export default function ActivateForm({ type, header, text, loading }) {
             type === 'success' ? 'success_text' : 'error_text'
           }`}
         >
-          {/* {header} */}
-          Olive
+          {header}
         </div>
-        <div className="popup_message">
-          {/* {text} */}
-          Olivier 33
-        </div>
+        <div className="popup_message">{text}</div>
         <PropagateLoader color="#1876f2" size={20} loading={loading} />
       </div>
     </div>

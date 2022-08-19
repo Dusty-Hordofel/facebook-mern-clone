@@ -76,10 +76,10 @@ export const register = async (req, res) => {
       { id: user._id.toString() },
       '30m'
     );
-    //console.log(emailVerificationToken);
+    console.log(emailVerificationToken);
 
     const url = `${process.env.BASE_URL}/activate/${emailVerificationToken}`;
-    //console.log(url);
+    console.log(url);
     sendVerificationEmail(user.email, user.first_name, url); //send email to user
     const token = generateToken({ id: user._id.toString() }, '7d'); //to generate a token
     res.send({
@@ -147,6 +147,7 @@ export const login = async (req, res) => {
       verified: user.verified,
     });
   } catch (error) {
+    console.log({ message: error.message });
     res.status(500).json({ message: error.message });
   }
 };

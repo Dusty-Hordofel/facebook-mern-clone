@@ -18,6 +18,8 @@ const auth = new OAuth2(
 //console.log(auth);
 export const sendVerificationEmail = (email, name, url) => {
   console.log('inside send verification email');
+  console.log(email, name, url);
+
   auth.setCredentials({
     refresh_token: MAILING_REFRESH,
   });
