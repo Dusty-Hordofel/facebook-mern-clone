@@ -293,3 +293,23 @@ Section V. Home
 
 43. Update Responsive home advanced
     I. update home->left->style.css
+
+Section VI. Forgot ,reset password,activate account,logout
+
+44. Authentification middlware
+    I. create auth route and controller in user.js
+    II. create middlwares->auth.js & add it in auth route.
+
+45. Activate account part 1
+46. Activate account part 2
+47. Activate Account and fix asecurity risk
+48. re-Send verification code
+49. Logout
+50. Reset password part 1
+51. Reset password part 2
+52. Reset password part 3
+53. Reset password part 4
+54. Find user
+55. Send reset code email
+56. Validate reset code email
+57. Change password

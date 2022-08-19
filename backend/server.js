@@ -19,7 +19,12 @@ mongoose
   });
 
 //cors
-const allowed = ['http://localhost:8600/api', 'http://localhost:3002'];
+const allowed = [
+  'http://localhost:8600/api',
+  'http://localhost:3002',
+  'http://localhost:3000',
+  'http://localhost:3001',
+];
 function options(req, res) {
   let tmp;
   let origin = req.header('Origin');
