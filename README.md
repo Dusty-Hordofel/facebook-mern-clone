@@ -324,6 +324,12 @@ Section VI. Forgot ,reset password,activate account,logout
     III.add a conditional rendering in pages->home->index.js
 
 49. Logout
+    I. add logout case in userReducer
+    II.<userMenu/>
+
+            I. add onClick event in logout tag.
+            II. create logout()
+
 50. Reset password part 1
 51. Reset password part 2
 52. Reset password part 3
