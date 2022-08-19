@@ -18,6 +18,7 @@ const UserMenu = ({ user }) => {
     });
     navigate('/login');
   };
+
   return (
     <div className="mmenu">
       {visible === 0 && (

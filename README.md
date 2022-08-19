@@ -331,6 +331,10 @@ Section VI. Forgot ,reset password,activate account,logout
             II. create logout()
 
 50. Reset password part 1
+    I. pages->reset-><Reset/> && App.js
+    II. add reset Link in <LoginForm/>
+    III. update <Reset/>
+
 51. Reset password part 2
 52. Reset password part 3
 53. Reset password part 4
