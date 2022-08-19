@@ -315,9 +315,14 @@ Section VI. Forgot ,reset password,activate account,logout
     III. dispatch VERIFY action, setTimeout() & redirect to <Home/>
     IV. test all verification process using a new user
 
-47. Activate Account and fix asecurity risk
-    I.
+47. Activate Account and fix a security risk
+    I. add a if statement to secure activateAccount in user controller.
+
 48. re-Send verification code
+    I. create sendVerification route and controller in user.js
+    II. create components->home-><SendVerification/> && App.js
+    III.add a conditional rendering in pages->home->index.js
+
 49. Logout
 50. Reset password part 1
 51. Reset password part 2
