@@ -348,7 +348,11 @@ Section VI. Forgot ,reset password,activate account,logout
 
 53. Reset password part 4
     I. update <LoginInput/>
+
 54. Find user
+    I. create findUser route and controller in user.js
+    II.<searchAccount/> && create handleSearch()
+
 55. Send reset code email
 56. Validate reset code email
 57. Change password
