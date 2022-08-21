@@ -336,7 +336,16 @@ Section VI. Forgot ,reset password,activate account,logout
     III. update <Reset/>
 
 51. Reset password part 2
+    I. update style.css
+    II. create [visible, setVisible]
+    III. create <searchAccount/> && <Reset/>
+    IV. create <SendEmail/>
+    V. create <CodeVerification>
+
 52. Reset password part 3
+    I. dsagehhea
+    II. fzaeyeayy
+    III. fzgaeeyy
 53. Reset password part 4
 54. Find user
 55. Send reset code email
