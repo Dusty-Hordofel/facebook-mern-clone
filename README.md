@@ -345,7 +345,9 @@ Section VI. Forgot ,reset password,activate account,logout
 52. Reset password part 3
     I. Change <ChangePassword/> && <Reset/>
     II. work on responsiveness style.css
+
 53. Reset password part 4
+    I. update <LoginInput/>
 54. Find user
 55. Send reset code email
 56. Validate reset code email

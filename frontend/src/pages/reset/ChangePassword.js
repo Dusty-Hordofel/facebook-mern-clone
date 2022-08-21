@@ -21,7 +21,7 @@ export default function ChangePassword({
 
     conf_password: Yup.string()
       .required('Confirm your password.')
-      .oneOf([Yup.ref('password')], 'Passwords must match.'),
+      .oneOf([Yup.ref('password')], 'Passwords must match.'), //oneOf is a validation rule that checks if the value of the field is the same as the value of another field
   });
   return (
     <div className="reset_form" style={{ height: '310px' }}>

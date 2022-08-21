@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginInput from '../../components/inputs/loginInput';
 import * as Yup from 'yup';
+
 export default function CodeVerification({ code, setCode, error }) {
   const validateCode = Yup.object({
     code: Yup.string()
