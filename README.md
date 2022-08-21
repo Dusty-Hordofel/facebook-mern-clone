@@ -343,9 +343,8 @@ Section VI. Forgot ,reset password,activate account,logout
     V. create <CodeVerification>
 
 52. Reset password part 3
-    I. dsagehhea
-    II. fzaeyeayy
-    III. fzgaeeyy
+    I. Change <ChangePassword/> && <Reset/>
+    II. work on responsiveness style.css
 53. Reset password part 4
 54. Find user
 55. Send reset code email
