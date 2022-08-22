@@ -354,5 +354,10 @@ Section VI. Forgot ,reset password,activate account,logout
     II.<searchAccount/> && create handleSearch()
 
 55. Send reset code email
+    I. create code model
+    II. create helpers->mailer->sendResetCode().
+    III. create findUser route and controller in user.js
+    IV. <SendEmail/> && sendEmail()
+
 56. Validate reset code email
 57. Change password

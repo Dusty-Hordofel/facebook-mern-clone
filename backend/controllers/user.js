@@ -6,8 +6,10 @@ import {
 import User from '../models/User.js';
 import bcrypt from 'bcrypt'; //bcryptjs is used to hash the password.
 import { generateToken } from '../helpers/tokens.js';
-import { sendVerificationEmail } from '../helpers/mailer.js';
+import { sendVerificationEmail, sendResetCode } from '../helpers/mailer.js';
 import jwt from 'jsonwebtoken';
+import generateCode from '../helpers/generateCode.js';
+import Code from '../models/Code.js';
 
 export const register = async (req, res) => {
   try {
@@ -202,6 +204,26 @@ export const findUser = async (req, res) => {
       picture: user.picture,
     });
   } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export const sendResetPasswordCode = async (req, res) => {
+  try {
+    const { email } = req.body;
+    const user = await User.findOne({ email }).select('-password');
+    await Code.findOneAndRemove({ user: user._id });
+    const code = generateCode(5);
+    const savedCode = await new Code({
+      code,
+      user: user._id,
+    }).save();
+    sendResetCode(user.email, user.first_name, code);
+    return res.status(200).json({
+      message: 'Email reset code has been sent to your email',
+    });
+  } catch (error) {
+    console.log({ message: error.message });
     res.status(500).json({ message: error.message });
   }
 };
