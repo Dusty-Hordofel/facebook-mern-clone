@@ -366,3 +366,24 @@ Section VI. Forgot ,reset password,activate account,logout
 57. Change password
     I. create changePassword route and controller in user.js
     II. create changePassword() -> <ChangePassword/>
+
+Section VI. Create,Post,Cloudinary,emojis...etc
+
+58. Create post popup
+    I. create component->CreatePostPopup-><CreatePostPopup/> & style.css
+
+59. Emoji picker
+    I. dfaefg
+60. Reactoring,add to your post ,post
+61. Preview Images part 1
+62. Preview Images part 2
+63. Preview Images part 3 ( images grid structure))
+64. Post model + create post function
+65. Upload Images to Cloudinary part 1
+66. Upload Images to Cloudinary part 2
+67. Post backgrounds
+68. Hide-open click outside popup
+69. Submit Post with background + loader
+70. Error popup & error handling
+71. Upload images and submit post
+72. Finish post submit fixing errors,validation
