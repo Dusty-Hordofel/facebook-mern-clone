@@ -373,7 +373,11 @@ Section VI. Create,Post,Cloudinary,emojis...etc
     I. create component->CreatePostPopup-><CreatePostPopup/> & style.css
 
 59. Emoji picker
-    I. dfaefg
+    I. <CreatePostPopup/>
+
+            I. npm i emoji-picker-react
+            II. use handleEmoji()
+
 60. Reactoring,add to your post ,post
 61. Preview Images part 1
 62. Preview Images part 2

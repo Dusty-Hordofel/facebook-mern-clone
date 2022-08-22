@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import './style.css';
+import Picker from 'emoji-picker-react';
 
 export default function CreatePostPopup({ user }) {
   //user comes from the redux state in App.js
   const [text, setText] = useState('');
   const [showPrev, setShowPrev] = useState(false);
-  const textRef = useRef(null); //userRef is a ref to the textarea
+  const [picker, setPicker] = useState(false);
+  const textRef = useRef(null); //useRef is a hook that lets you store a reference to a DOM node in a React component.
   const [cursorPosition, setCursorPosition] = useState();
 
   useEffect(() => {
@@ -15,13 +17,12 @@ export default function CreatePostPopup({ user }) {
   const handleEmoji = (e, { emoji }) => {
     const ref = textRef.current;
     ref.focus();
-    const start = text.substring(0, ref.selectionStart);
-    const end = text.substring(ref.selectionStart);
+    const start = text.substring(0, ref.selectionStart); // start of the text before the cursor
+    const end = text.substring(ref.selectionStart); // text after the cursor
     const newText = start + emoji + end;
     setText(newText);
     setCursorPosition(start.length + emoji.length);
   };
-
   console.log(text);
   return (
     <div className="blur">
@@ -58,6 +59,20 @@ export default function CreatePostPopup({ user }) {
             ></textarea>
           </div>
         )}
+        <div className="post_emojis_wrap">
+          {picker && (
+            <div className="comment_emoji_picker rlmove">
+              <Picker onEmojiClick={handleEmoji} />
+            </div>
+          )}
+          <img src="../../../icons/colorful.png" alt="" />
+          <i
+            className="emoji_icon_large"
+            onClick={() => {
+              setPicker((prev) => !prev);
+            }}
+          ></i>
+        </div>
       </div>
     </div>
   );
