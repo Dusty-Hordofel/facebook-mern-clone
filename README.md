@@ -360,4 +360,7 @@ Section VI. Forgot ,reset password,activate account,logout
     IV. <SendEmail/> && sendEmail()
 
 56. Validate reset code email
+    I. create validateResetCode route and controller in user.js
+    II. create verifyCode() -> <CodeVerification>
+
 57. Change password
