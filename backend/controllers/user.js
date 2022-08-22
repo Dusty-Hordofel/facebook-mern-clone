@@ -243,3 +243,16 @@ export const validateResetCode = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+export const changePassword = async (req, res) => {
+  const { email, password } = req.body;
+
+  const cryptedPassword = await bcrypt.hash(password, 12); //bcrypt.hash is used to crypt the password
+  await User.findOneAndUpdate(
+    { email },
+    {
+      password: cryptedPassword, //we update the password in the database
+    }
+  );
+  return res.status(200).json({ message: 'ok' });
+};
