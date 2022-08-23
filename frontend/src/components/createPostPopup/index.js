@@ -1,28 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import './style.css';
 import Picker from 'emoji-picker-react';
+import EmojiPickerBackgrounds from './EmojiPickerBackgrounds';
+import AddToYourPost from './AddToYourPost';
+import ImagePreview from './ImagePreview';
 
 export default function CreatePostPopup({ user }) {
   //user comes from the redux state in App.js
   const [text, setText] = useState('');
   const [showPrev, setShowPrev] = useState(false);
-  const [picker, setPicker] = useState(false);
   const textRef = useRef(null); //useRef is a hook that lets you store a reference to a DOM node in a React component.
-  const [cursorPosition, setCursorPosition] = useState();
 
-  useEffect(() => {
-    textRef.current.selectionEnd = cursorPosition;
-  }, [cursorPosition]);
-
-  const handleEmoji = (e, { emoji }) => {
-    const ref = textRef.current;
-    ref.focus();
-    const start = text.substring(0, ref.selectionStart); // start of the text before the cursor
-    const end = text.substring(ref.selectionStart); // text after the cursor
-    const newText = start + emoji + end;
-    setText(newText);
-    setCursorPosition(start.length + emoji.length);
-  };
   console.log(text);
   return (
     <div className="blur">
@@ -47,32 +35,25 @@ export default function CreatePostPopup({ user }) {
           </div>
         </div>
 
-        {!showPrev && (
-          <div className="flex_center">
-            <textarea
-              ref={textRef}
-              maxLength="100"
-              value={text}
-              placeholder={`What's on your mind, ${user.first_name}`}
-              className="post_input"
-              onChange={(e) => setText(e.target.value)}
-            ></textarea>
-          </div>
+        {!showPrev ? (
+          <>
+            <EmojiPickerBackgrounds
+              text={text}
+              user={user}
+              setText={setText}
+              showPrev={showPrev}
+            />
+          </>
+        ) : (
+          <ImagePreview
+            text={text}
+            user={user}
+            setText={setText}
+            showPrev={showPrev}
+          />
         )}
-        <div className="post_emojis_wrap">
-          {picker && (
-            <div className="comment_emoji_picker rlmove">
-              <Picker onEmojiClick={handleEmoji} />
-            </div>
-          )}
-          <img src="../../../icons/colorful.png" alt="" />
-          <i
-            className="emoji_icon_large"
-            onClick={() => {
-              setPicker((prev) => !prev);
-            }}
-          ></i>
-        </div>
+        <AddToYourPost />
+        <button className="post_submit">Post</button>
       </div>
     </div>
   );
