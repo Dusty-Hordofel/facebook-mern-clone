@@ -381,7 +381,10 @@ Section VI. Create,Post,Cloudinary,emojis...etc
 60. Reactoring,add to your post ,post
     I. create <EmojiPickerBackgrounds/>,<AddToYourPost/> <ImagePreview/>
     II. update style.css file
+
 61. Preview Images part 1
+    I. <ImagePreview/>
+
 62. Preview Images part 2
 63. Preview Images part 3 ( images grid structure))
 64. Post model + create post function

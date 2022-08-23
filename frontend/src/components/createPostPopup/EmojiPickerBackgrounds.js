@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Picker from 'emoji-picker-react';
 
 export default function EmojiPickerBackgrounds({ text, user, setText, type2 }) {
+  //type2 is used to change the size of the element. type2 is true when the user is adding an image to their post.&
   const [picker, setPicker] = useState(false);
   const [cursorPosition, setCursorPosition] = useState();
   const textRef = useRef(null); //useRef is a hook that lets you store a reference to a DOM node in a React component.
