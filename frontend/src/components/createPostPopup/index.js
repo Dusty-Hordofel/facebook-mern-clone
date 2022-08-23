@@ -8,10 +8,9 @@ import ImagePreview from './ImagePreview';
 export default function CreatePostPopup({ user }) {
   //user comes from the redux state in App.js
   const [text, setText] = useState('');
-  const [showPrev, setShowPrev] = useState(false);
-  const textRef = useRef(null); //useRef is a hook that lets you store a reference to a DOM node in a React component.
+  const [showPrev, setShowPrev] = useState(true);
+  const [images, setImages] = useState([]);
 
-  console.log(text);
   return (
     <div className="blur">
       <div className="postBox">
@@ -50,6 +49,8 @@ export default function CreatePostPopup({ user }) {
             user={user}
             setText={setText}
             showPrev={showPrev}
+            images={images}
+            setImages={setImages}
           />
         )}
         <AddToYourPost />

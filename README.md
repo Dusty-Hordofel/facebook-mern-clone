@@ -386,6 +386,14 @@ Section VI. Create,Post,Cloudinary,emojis...etc
     I. <ImagePreview/>
 
 62. Preview Images part 2
+    I. <ImagePreview/>
+
+            I. user input & add a useRef in it
+            II. create handleImages()
+            III. pass images & setImages as a props
+            IV. add conditional rendering to see if we have images or not?
+            V. update style.css file.
+
 63. Preview Images part 3 ( images grid structure))
 64. Post model + create post function
 65. Upload Images to Cloudinary part 1
